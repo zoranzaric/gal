@@ -14,6 +14,9 @@ Installation
     # install dependencies
     $ pip install -r requirements.txt
 
+    # change the secret key
+    $ sed -i 's/CHANGE_THE_SECRET_KEY/SOMETHING_SECRET' galsite/settings.py
+
     # create the database and an admin user
     $ python manage.py syncdb
 
