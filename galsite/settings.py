@@ -1,4 +1,4 @@
-# Django settings for gal project.
+# Django settings for galsite project.
 import os
 base_directory = os.path.dirname(__file__)
 
@@ -78,7 +78,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '%)yn7o69jb%2a4&amp;mei#t%$()o%mi9d$eqqh9iej9pd5brs^teg'
+SECRET_KEY = 'CHANGE_THE_SECRET_KEY'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -97,7 +97,7 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'gal.urls'
+ROOT_URLCONF = 'galsite.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'gal.wsgi.application'
