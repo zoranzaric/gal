@@ -1,4 +1,3 @@
 Django
 South
-PIL
 -e git+https://github.com/zoranzaric/django-gal.git#egg=django-gal
