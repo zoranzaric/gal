@@ -11,6 +11,7 @@ class GalleryResource(ModelResource):
 
 class ImageResource(ModelResource):
     gallery = fields.ForeignKey(GalleryResource, 'gallery')
+    url = fields.CharField('image_url')
 
     class Meta:
         queryset = Image.objects.all()
