@@ -117,6 +117,7 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'gal',
     'south',
+    'tastypie',
 )
 
 GAL_IMAGES_DIR = os.path.join(base_directory, '..', 'images')
