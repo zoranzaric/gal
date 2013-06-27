@@ -1,4 +1,4 @@
-# Django settings for galsite project.
+# Django settings for proofs project.
 import os
 base_directory = os.path.dirname(__file__)
 
@@ -97,7 +97,7 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'galsite.urls'
+ROOT_URLCONF = 'proofs.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'gal.wsgi.application'
@@ -116,6 +116,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.admindocs',
     'gal',
+    'proofs',
     'south',
     'tastypie',
 )
@@ -151,3 +152,6 @@ LOGGING = {
         },
     }
 }
+
+LOGIN_URL = "/login"
+LOGIN_REDIRECT_URL = "/"
