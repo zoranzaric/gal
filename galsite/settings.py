@@ -116,6 +116,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.admindocs',
     'gal',
+    'galsite',
     'south',
     'tastypie',
 )
@@ -151,3 +152,6 @@ LOGGING = {
         },
     }
 }
+
+LOGIN_URL = "/login/"
+LOGIN_REDIRECT_URL = "/"

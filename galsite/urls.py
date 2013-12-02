@@ -3,6 +3,8 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 admin.autodiscover()
 
+from django.contrib.auth import views as auth_views
+
 from tastypie.api import Api
 from galsite.api.resources import ImageResource, GalleryResource
 
@@ -15,6 +17,19 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 
     (r'^api/', include(v1_api.urls)),
+
+    url(r'^(?P<gallery>[^/]+)$', 'galsite.views.index'),
+    url(r'^$', 'galsite.views.home'),
+
+    url(r'^login/?$',
+        auth_views.login,
+        {'template_name': 'login.html'},
+        name='auth_login'),
+    url(r'^logout/?$',
+        auth_views.logout,
+        {'template_name': 'logout.html'},
+        name='auth_logout'),
+
 
     url(r'^', include('gal.urls')),
 )
